@@ -1,0 +1,17 @@
+version: "3"
+services:
+  app:
+    build:
+      context: ./
+      args:
+        focalboard_version: 0.6.1
+    container_name: focalboard
+    ports: 
+      - 8000:8000
+    environment:
+      - VIRTUAL_HOST=focalboard.local
+      - VIRTUAL_PORT=8000
+    volumes:
+      - "./config-sqlite.json:/opt/focalboard/config.json"
+      - "./sqlite:/opt/focalboard/data"
+      - "./files:/opt/focalboard/files"
