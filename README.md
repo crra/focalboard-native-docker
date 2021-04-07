@@ -19,7 +19,7 @@ Plase edit the `config.json` and change the default settings (e.g. secrets).
 ### Docker
 
 ```
-docker build -t focalboard .
+docker build --build-arg focalboard_version=0.6.1 -t focalboard .
 docker run -it -p 8000:8000 focalboard
 ```
 
