@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       args:
-        focalboard_version: 0.6.1
+        focalboard_version: 0.6.5
     container_name: focalboard
     ports: 
       - 8000:8000
